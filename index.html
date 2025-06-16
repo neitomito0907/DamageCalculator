@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カードめくり期待値計算</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>カードめくり期待値計算</h1>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="totalCards">山札の枚数:</label>
+                <input type="number" id="totalCards" value="10" min="1">
+            </div>
+            <div class="input-group">
+                <label for="numB">CXの枚数:</label>
+                <input type="number" id="numB" value="3" min="0">
+            </div>
+            <div class="input-group">
+                <label for="nValue">n枚めくる:</label>
+                <input type="number" id="nValue" value="3" min="0">
+            </div>
+            <div class="input-group">
+                <label for="oValue">o枚めくる:</label>
+                <input type="number" id="oValue" value="2" min="0">
+            </div>
+            <div class="input-group">
+                <label for="pValue">p枚めくる:</label>
+                <input type="number" id="pValue" value="1" min="0">
+            </div>
+            <div class="input-group">
+                <label for="numTrials">「n,o,p」試行繰り返し回数:</label>
+                <input type="number" id="numTrials" value="3" min="1">
+            </div>
+            <div class="input-group">
+                <label for="numSimulations">シミュレーション回数:</label>
+                <input type="number" id="numSimulations" value="100000" min="1000">
+            </div>
+            <button id="calculateButton">計算実行</button>
+            <div id="loadingSpinner" class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i> 計算中...
+            </div>
+        </div>
+
+        <div class="result-section">
+            <h2>計算結果</h2>
+            <p>ダメージ期待値: <span id="expectedValue">--</span></p>
+            <h3>ダメージ確率:</h3>
+            <div id="probabilities">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
