@@ -13,30 +13,69 @@
 
         <div class="input-section">
             <div class="input-group">
-                <label for="totalCards">山札の枚数:</label>
+                <label for="totalCards">山札の総枚数:</label>
                 <input type="number" id="totalCards" value="10" min="1">
             </div>
             <div class="input-group">
-                <label for="numB">CXの枚数:</label>
+                <label for="numB">Bのカード枚数:</label>
                 <input type="number" id="numB" value="3" min="0">
             </div>
+
+            <hr> <h3>1回目 (N1, O1, P1)</h3>
             <div class="input-group">
-                <label for="nValue">n枚めくる:</label>
-                <input type="number" id="nValue" value="3" min="0">
+                <label for="n1Value">N1枚めくる:</label>
+                <input type="number" id="n1Value" value="3" min="0">
             </div>
             <div class="input-group">
-                <label for="oValue">o枚めくる:</label>
-                <input type="number" id="oValue" value="2" min="0">
+                <label for="o1Value">O1枚めくる:</label>
+                <input type="number" id="o1Value" value="2" min="0">
             </div>
             <div class="input-group">
-                <label for="pValue">p枚めくる:</label>
-                <input type="number" id="pValue" value="1" min="0">
+                <label for="p1Value">P1枚めくる:</label>
+                <input type="number" id="p1Value" value="1" min="0">
             </div>
             <div class="input-group">
-                <label for="numTrials">「n,o,p」試行繰り返し回数:</label>
-                <input type="number" id="numTrials" value="3" min="1">
+                <label for="returnCards1">1回後に山札に戻す枚数:</label>
+                <input type="number" id="returnCards1" value="0" min="0">
+            </div>
+
+            <hr> <h3>2回目 (N2, O2, P2)</h3>
+            <div class="input-group">
+                <label for="n2Value">N2枚めくる:</label>
+                <input type="number" id="n2Value" value="3" min="0">
             </div>
             <div class="input-group">
+                <label for="o2Value">O2枚めくる:</label>
+                <input type="number" id="o2Value" value="2" min="0">
+            </div>
+            <div class="input-group">
+                <label for="p2Value">P2枚めくる:</label>
+                <input type="number" id="p2Value" value="1" min="0">
+            </div>
+            <div class="input-group">
+                <label for="returnCards2">2回後に山札に戻す枚数:</label>
+                <input type="number" id="returnCards2" value="0" min="0">
+            </div>
+
+            <hr> <h3>3回目 (N3, O3, P3)</h3>
+            <div class="input-group">
+                <label for="n3Value">N3枚めくる:</label>
+                <input type="number" id="n3Value" value="3" min="0">
+            </div>
+            <div class="input-group">
+                <label for="o3Value">O3枚めくる:</label>
+                <input type="number" id="o3Value" value="2" min="0">
+            </div>
+            <div class="input-group">
+                <label for="p3Value">P3枚めくる:</label>
+                <input type="number" id="p3Value" value="1" min="0">
+            </div>
+            <div class="input-group">
+                <label for="returnCards3">3回後に山札に戻す枚数:</label>
+                <input type="number" id="returnCards3" value="0" min="0">
+            </div>
+
+            <hr> <div class="input-group">
                 <label for="numSimulations">シミュレーション回数:</label>
                 <input type="number" id="numSimulations" value="100000" min="1000">
             </div>
@@ -48,8 +87,8 @@
 
         <div class="result-section">
             <h2>計算結果</h2>
-            <p>ダメージ期待値: <span id="expectedValue">--</span></p>
-            <h3>ダメージ確率:</h3>
+            <p>最終的にめくった枚数の期待値: <span id="expectedValue">--</span></p>
+            <h3>めくった枚数が起きる確率:</h3>
             <div id="probabilities">
                 </div>
         </div>

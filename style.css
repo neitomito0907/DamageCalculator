@@ -48,16 +48,22 @@ h2, h3 {
 .input-group label {
     font-weight: bold;
     color: #555;
-    flex-basis: 60%; /* ラベルの幅を調整 */
+    flex-basis: 55%; /* ラベルの幅を調整 */
     text-align: left;
 }
 
 .input-group input[type="number"] {
-    flex-basis: 35%; /* 入力フィールドの幅を調整 */
+    flex-basis: 40%; /* 入力フィールドの幅を調整 */
     padding: 10px;
     border: 1px solid #bdc3c7;
     border-radius: 5px;
     font-size: 1em;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 25px 0;
 }
 
 button {
