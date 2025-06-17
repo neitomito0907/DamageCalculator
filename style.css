@@ -190,3 +190,80 @@ button:disabled { /* 無効化時のスタイル */
         gap: 8px;
     }
 }
+
+/* スマートフォン対応 (変更) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2, h3 {
+        font-size: 1.1em;
+    }
+
+    .input-group {
+        flex-direction: column; /* 要素を縦に並べる */
+        align-items: flex-start; /* 左寄せにする */
+    }
+
+    .input-group label {
+        flex-basis: auto; /* 幅の指定を解除 */
+        margin-bottom: 5px; /* ラベルの下に少し余白 */
+    }
+
+    .input-group input[type="number"] {
+        width: 100%; /* 入力フィールドを幅いっぱいに */
+        box-sizing: border-box; /* paddingとborderを幅に含める */
+    }
+
+    .input-group.timing-group {
+        flex-direction: column; /* 縦並びにする */
+        align-items: flex-start; /* 左寄せ */
+    }
+
+    .radio-options {
+        /* flex-direction: column;  /* この行を削除またはコメントアウト */
+        display: flex; /* 追加: ラジオボタンとラベルをフレックスボックスで制御 */
+        flex-wrap: wrap; /* 必要に応じて折り返す */
+        gap: 15px; /* ラジオボタンと次の要素の間のスペース */
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .radio-options div { /* 追加: 各ラジオボタンとラベルのペアを囲む新しいdivのスタイル */
+        display: flex;
+        align-items: center; /* 垂直方向中央揃え */
+        gap: 5px; /* ラジオボタンとラベルの間のスペース */
+    }
+
+    .radio-options input[type="radio"] {
+        margin-right: 0; /* デフォルトのマージンをリセット */
+        flex-basis: auto;
+        padding: 0;
+        border: none;
+        min-width: unset;
+    }
+
+    .radio-options label {
+        font-weight: normal;
+        color: #333;
+        cursor: pointer;
+        margin-right: 0;
+        flex-basis: auto;
+    }
+
+    button {
+        width: 100%; /* ボタンを幅いっぱいに */
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .result-section {
+        padding: 15px;
+    }
+}
