@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>カードめくり期待値計算</h1>
+        <h1>WSダメージ期待値計算機</h1>
 
         <div class="input-section">
             <div class="input-group">
@@ -17,62 +17,101 @@
                 <input type="number" id="totalCards" value="10" min="1">
             </div>
             <div class="input-group">
-                <label for="numB">Bのカード枚数:</label>
+                <label for="numB">CX枚数:</label>
                 <input type="number" id="numB" value="3" min="0">
             </div>
 
-            <hr> <h3>1回目 (N1, O1, P1)</h3>
+            <hr> <h3>1回目 (ダメージ1, ダメージ2, ダメージ3)</h3>
             <div class="input-group">
-                <label for="n1Value">N1枚めくる:</label>
+                <label for="n1Value">ダメージ1:</label>
                 <input type="number" id="n1Value" value="3" min="0">
             </div>
             <div class="input-group">
-                <label for="o1Value">O1枚めくる:</label>
+                <label for="o1Value">ダメージ2:</label>
                 <input type="number" id="o1Value" value="2" min="0">
             </div>
             <div class="input-group">
-                <label for="p1Value">P1枚めくる:</label>
+                <label for="p1Value">ダメージ3:</label>
                 <input type="number" id="p1Value" value="1" min="0">
             </div>
             <div class="input-group">
-                <label for="returnCards1">1回後に山札に戻す枚数:</label>
-                <input type="number" id="returnCards1" value="0" min="0">
+                <label for="returnA1">逆圧縮枚数:</label>
+                <input type="number" id="returnA1" value="0" min="0">
+            </div>
+            <div class="input-group timing-group">
+                <label>逆圧縮タイミング:</label>
+                <div class="radio-options">
+                    <input type="radio" id="timing1_beforeN" name="timing1" value="beforeN" checked>
+                    <label for="timing1_beforeN">ダメージ1の前</label>
+                    <input type="radio" id="timing1_beforeO" name="timing1" value="beforeO">
+                    <label for="timing1_beforeO">ダメージ2の前</label>
+                    <input type="radio" id="timing1_beforeP" name="timing1" value="beforeP">
+                    <label for="timing1_beforeP">ダメージ3の前</label>
+                    <input type="radio" id="timing1_afterSet" name="timing1" value="afterSet">
+                    <label for="timing1_afterSet">アタック後</label>
+                </div>
             </div>
 
-            <hr> <h3>2回目 (N2, O2, P2)</h3>
+            <hr> <h3>2回目 (ダメージ1, ダメージ2, ダメージ3)</h3>
             <div class="input-group">
-                <label for="n2Value">N2枚めくる:</label>
+                <label for="n2Value">ダメージ1:</label>
                 <input type="number" id="n2Value" value="3" min="0">
             </div>
             <div class="input-group">
-                <label for="o2Value">O2枚めくる:</label>
+                <label for="o2Value">ダメージ2:</label>
                 <input type="number" id="o2Value" value="2" min="0">
             </div>
             <div class="input-group">
-                <label for="p2Value">P2枚めくる:</label>
+                <label for="p2Value">ダメージ3:</label>
                 <input type="number" id="p2Value" value="1" min="0">
             </div>
             <div class="input-group">
-                <label for="returnCards2">2回後に山札に戻す枚数:</label>
-                <input type="number" id="returnCards2" value="0" min="0">
+                <label for="returnA2">逆圧縮枚数:</label>
+                <input type="number" id="returnA2" value="0" min="0">
+            </div>
+            <div class="input-group timing-group">
+                <label>逆圧縮タイミング:</label>
+                <div class="radio-options">
+                    <input type="radio" id="timing2_beforeN" name="timing2" value="beforeN" checked>
+                    <label for="timing2_beforeN">ダメージ1の前</label>
+                    <input type="radio" id="timing2_beforeO" name="timing2" value="beforeO">
+                    <label for="timing2_beforeO">ダメージ2の前</label>
+                    <input type="radio" id="timing2_beforeP" name="timing2" value="beforeP">
+                    <label for="timing2_beforeP">ダメージ3の前</label>
+                    <input type="radio" id="timing2_afterSet" name="timing2" value="afterSet">
+                    <label for="timing2_afterSet">アタック後</label>
+                </div>
             </div>
 
-            <hr> <h3>3回目 (N3, O3, P3)</h3>
+            <hr> <h3>3回目 (ダメージ1, ダメージ2, ダメージ3)</h3>
             <div class="input-group">
-                <label for="n3Value">N3枚めくる:</label>
+                <label for="n3Value">ダメージ1:</label>
                 <input type="number" id="n3Value" value="3" min="0">
             </div>
             <div class="input-group">
-                <label for="o3Value">O3枚めくる:</label>
+                <label for="o3Value">ダメージ2:</label>
                 <input type="number" id="o3Value" value="2" min="0">
             </div>
             <div class="input-group">
-                <label for="p3Value">P3枚めくる:</label>
+                <label for="p3Value">ダメージ3:</label>
                 <input type="number" id="p3Value" value="1" min="0">
             </div>
             <div class="input-group">
-                <label for="returnCards3">3回後に山札に戻す枚数:</label>
-                <input type="number" id="returnCards3" value="0" min="0">
+                <label for="returnA3">逆圧縮枚数:</label>
+                <input type="number" id="returnA3" value="0" min="0">
+            </div>
+            <div class="input-group timing-group">
+                <label>逆圧縮タイミング:</label>
+                <div class="radio-options">
+                    <input type="radio" id="timing3_beforeN" name="timing3" value="beforeN" checked>
+                    <label for="timing3_beforeN">ダメージ1の前</label>
+                    <input type="radio" id="timing3_beforeO" name="timing3" value="beforeO">
+                    <label for="timing3_beforeO">ダメージ2の前</label>
+                    <input type="radio" id="timing3_beforeP" name="timing3" value="beforeP">
+                    <label for="timing3_beforeP">ダメージ3の前</label>
+                    <input type="radio" id="timing3_afterSet" name="timing3" value="afterSet">
+                    <label for="timing3_afterSet">アタック後</label>
+                </div>
             </div>
 
             <hr> <div class="input-group">
@@ -87,8 +126,8 @@
 
         <div class="result-section">
             <h2>計算結果</h2>
-            <p>最終的にめくった枚数の期待値: <span id="expectedValue">--</span></p>
-            <h3>めくった枚数が起きる確率:</h3>
+            <p>総ダメージの期待値: <span id="expectedValue">--</span></p>
+            <h3>各ダメージ値の確率:</h3>
             <div id="probabilities">
                 </div>
         </div>

@@ -60,6 +60,47 @@ h2, h3 {
     font-size: 1em;
 }
 
+/* 戻すタイミングのラジオボタングループのスタイル */
+.input-group.timing-group {
+    flex-direction: column; /* 縦並びにする */
+    align-items: flex-start; /* 左寄せ */
+    margin-bottom: 20px;
+    padding-left: 5px; /* 少し左に寄せる */
+}
+
+.input-group.timing-group > label {
+    margin-bottom: 10px; /* ラベルとラジオボタンの間にスペース */
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    width: 100%; /* ラベルの幅をフルに */
+}
+
+.radio-options {
+    display: flex;
+    flex-wrap: wrap; /* 小さな画面で折り返す */
+    gap: 5px; /* ラジオボタン間のスペース */
+    width: 100%;
+    justify-content: flex-start; /* 左寄せ */
+}
+
+.radio-options input[type="radio"] {
+    margin-right: 5px; /* ラジオボタンとラベルの間 */
+    flex-basis: auto; /* width: 100% を解除 */
+    padding: 0; /* デフォルトのパディングを解除 */
+    border: none; /* デフォルトの枠線を解除 */
+    min-width: unset; /* 最小幅を解除 */
+}
+
+.radio-options label {
+    font-weight: normal; /* ラジオボタンのラベルは太字にしない */
+    color: #333;
+    cursor: pointer;
+    margin-right: 0; /* gapで制御するため */
+    flex-basis: auto; /* ラベルの幅を自動調整 */
+}
+
+
 hr {
     border: none;
     border-top: 1px solid #ccc;
@@ -143,5 +184,9 @@ button:disabled { /* 無効化時のスタイル */
     }
     .input-group input[type="number"] {
         width: 100%;
+    }
+    .radio-options {
+        flex-direction: column;
+        gap: 8px;
     }
 }
